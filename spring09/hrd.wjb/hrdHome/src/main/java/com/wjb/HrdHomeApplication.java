@@ -1,7 +1,5 @@
 package com.wjb;
 
-
-
 import javax.sql.DataSource;
 
 import org.slf4j.Logger;
@@ -17,19 +15,20 @@ public class HrdHomeApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(HrdHomeApplication.class, args);
 	}
-	
-	//DB연결 테스트
+
+	// DB연결 테스트
 	private static final Logger logger = LoggerFactory.getLogger(HrdHomeApplication.class);
-	
+
 	@Bean
 	CommandLineRunner testDBCon(DataSource dataSource) {
 		return arg -> {
 			try {
 				dataSource.getConnection().close();
-				logger.info("^^^^^ 연결성공 ^^^^^^");
+				logger.info("^^^^^^ DataBase 연결 성공 ^^^^^^");
 			} catch (Exception e) {
-				logger.error("ㅠㅠㅠㅠㅠㅠ 연결실패 ㅠㅠㅠㅠㅠㅠ");
+				logger.error("ㅠㅠㅠㅠㅠㅠ DataBase 연결 실패 ㅠㅠㅠㅠㅠㅠ", e);
 			}
 		};
 	}
+
 }
