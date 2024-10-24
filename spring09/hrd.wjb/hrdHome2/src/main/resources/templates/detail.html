@@ -3,8 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>회원 정보 보기</title>
+	<link th:href="@{/css/style.css}" rel="stylesheet" />
 </head>
 <body>
+	<div class="main"></div>
+	
+	<div th:insert="./head :: header"></div>
+	
+	
 <table>
     <tr>
         <th>회원번호</th>
@@ -39,7 +45,10 @@
 <button onclick="listReq()">목록</button>
 <button onclick="updateReq()">수정</button>
 <button onclick="deleteReq()">삭제</button>
+
+<div th:insert="./footer :: footer"></div>
 </body>
+
 <script th:inline="javascript">
     const listReq = () => {
         location.href = "/list";

@@ -5,6 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>회원추가</title>
 </head>
+<div th:insert="./head :: header"></div>
+<hr>
 <body>
 	<form action="/save" method="post">
 		회원번호 : <input type="text" name="custno"><br>
@@ -17,6 +19,8 @@
 		<input type="submit" value="작성">
 		
 	</form>
+	<hr>
+	<div th:insert="./footer :: footer"></div>
 
 </body>
 </html>

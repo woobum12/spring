@@ -3,12 +3,17 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link th:href="@{/css/style.css}" rel="stylesheet" />
 <title>회원 조회</title>
 <style>
 	
 </style>
 </head>
 <body>
+	<div id ="main"></div>
+	
+	<div th:insert="./head :: header"></div>
+<hr>
 	<a href="/save">멤버저장</a>
 	<table>
 		<tr>
@@ -31,5 +36,8 @@
 
 		</tr>
 	</table>
+	
+	<div th:insert="./footer :: footer"></div>
+
 </body>
 </html>
