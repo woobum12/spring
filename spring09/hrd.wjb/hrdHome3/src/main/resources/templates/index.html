@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HOME</title>
+<link th:href="@{/css/style.css}" rel="stylesheet" />
+</head>
+<body>
+	<div class="main">
+	<div class="menu">
+		<div th:insert="./head :: header"></div>
+	
+	<h1>멤버</h1>
+	<a href="/save">멤버 추가</a>
+	<a href="/list">멤버 리스트</a>
+	
+	<div th:insert="./footer :: footer"></div>
+	</div>
+	</div>
+</body>
+</html>

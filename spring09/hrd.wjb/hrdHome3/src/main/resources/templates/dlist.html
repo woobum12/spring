@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>머니</title>
+<!--  css -->
+<link th:href="@{/css/style.css}" rel="stylesheet" />
+</head>
+<body>
+	<div class="main">
+		
+		<div th:insert="./head :: header"></div>
+			
+		<h1>dlist</h1>
+		
+		<table>
+	<tr>
+		<th>회원번호</th>
+		<th>회원이름</th>
+		<th>회원등급</th>
+		<th>회원매출</th>
+	</tr>
+	<tr th:each="money: ${moneyList}">
+		<td th:text="${money.custno}"></td>
+		<td th:text="${money.custname}"></td>
+		<td th:text="${money.grade}"></td>
+		<td th:text="${money.price}"></td>
+	</tr>
+</table>
+
+		<div th:insert="./footer :: footer"></div>
+	</div>
+</body>
+</html>
