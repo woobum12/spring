@@ -1,0 +1,35 @@
+<link th:href="@{/css/style.css}" rel="stylesheet" />
+</head>
+<body>
+	<div class="main">
+		
+		<!-- 페이지상단 및 메뉴 -->
+		<div th:insert="~{./header :: header}"></div>
+		
+		<section>
+			<h1>멘토 점수 조회</h1>
+		</section>
+		<!-- 멘토 점수 조회 -->
+		<table>
+			<tr>
+				<th>참가번호</th>
+				<th>참가자명</th>
+				<th>생년월일</th>
+				<th>점수</th>
+				<th>등급</th>
+				<th>멘토</th>
+			</tr>
+			<tr th:each="point: ${pointList}">
+				<td th:text="${point.artist_id}"></td>
+				<td th:text="${point.artist_name}"></td>
+				<td th:text="${point.artist_birth}"></td>
+				<td th:text="${point.point}"></td>
+				<td th:text="${point.grade}"></td>
+				<td th:text="${point.mento_name}"></td>
+			</tr>
+		</table>
+		
+		<!-- 페이지하단 -->
+		<div th:insert="~{./footer :: footer}"></div>
+	</div>
+</body>

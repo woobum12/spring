@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.wjb.dto.ArtistDTO;
+import com.wjb.dto.PointDTO;
 import com.wjb.repository.ArtistRepository;
 
 import lombok.RequiredArgsConstructor;
@@ -33,6 +34,18 @@ public class ArtistService {
 	
 	public void update(ArtistDTO artistDTO) {
 		artistRepository.update(artistDTO);
+	}
+	
+	public List<PointDTO> selectMentoPoint() {
+		return artistRepository.selectMentoPoint();
+	}
+	
+	public void delete(String artist_id) {
+		artistRepository.delete(artist_id);
+	}
+	
+	public List<PointDTO> rankPoint() {
+		return artistRepository.selectRank();
 	}
 	
 }
